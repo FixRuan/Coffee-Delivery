@@ -1,5 +1,6 @@
 import React from "react";
 import { CoffeeCard } from "../../../../components/CoffeeCard";
+import { coffees } from "../../../../data/coffees";
 
 import {
 	Coffees,
@@ -12,11 +13,16 @@ export function CoffeeList() {
 			<h1>Nossos cafés</h1>
 
 			<Coffees>
-				<CoffeeCard />
-				<CoffeeCard />
-				<CoffeeCard />
-				<CoffeeCard />
-				<CoffeeCard />
+				{coffees.map(coffee =>
+					<CoffeeCard
+						key={coffee.id}
+						name={coffee.name}
+						description={coffee.description}
+						image={coffee.photo}
+						price={coffee.price}
+						tags={coffee.tags}
+					/>
+				)}
 			</Coffees>
 		</Container>
 	);
