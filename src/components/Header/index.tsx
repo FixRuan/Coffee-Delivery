@@ -7,13 +7,16 @@ import {
 } from "./styles";
 
 import logo from "../../assets/logo.svg";
+import { NavLink } from "react-router-dom";
 
 export function Header() {
 
 	return (
 		<Container>
 			<div className="container">
-				<img src={logo} alt="Logo da Coffee Delivery" />
+				<NavLink to="/" >
+					<img src={logo} alt="Logo da Coffee Delivery" />
+				</NavLink>
 
 				<nav>
 					<HeaderButton variant="purple">
@@ -21,9 +24,11 @@ export function Header() {
 						Goioerê, PR
 					</HeaderButton>
 
-					<HeaderButton variant="yellow">
-						<ShoppingCart size={20} weight="fill" />
-					</HeaderButton>
+					<NavLink to="/order" >
+						<HeaderButton variant="yellow">
+							<ShoppingCart size={20} weight="fill" />
+						</HeaderButton>
+					</NavLink>
 				</nav>
 			</div>
 		</Container>
