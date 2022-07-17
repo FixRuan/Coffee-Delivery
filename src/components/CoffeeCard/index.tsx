@@ -10,31 +10,40 @@ import {
 	CardFooter,
 	AddCartWrapper
 } from "./styles";
+import { formatMoney } from "../../utils/formatMoney";
 
 interface CoffeeCardProps {
-	image: any;
+	id: number;
+	photo: string;
 	name: string;
 	tags: string[];
 	description: string;
 	price: number;
 }
 
-export function CoffeeCard({ name, description, image, price, tags }: CoffeeCardProps) {
+interface Coffee {
+	coffee: CoffeeCardProps;
+}
+
+export function CoffeeCard({ coffee }: Coffee) {
+
+	const formattedPrice = formatMoney(coffee.price);
+
 	return (
 		<Container>
-			<img src={image} alt="" />
+			<img src={coffee.photo} alt="" />
 
 			<Tags>
-				{tags.map(tag => <span key={tag}>{tag}</span>)}
+				{coffee.tags.map(tag => <span key={`${coffee.id}${tag}`}>{tag}</span>)}
 			</Tags>
 
-			<Name>{name}</Name>
-			<Description>{description}</Description>
+			<Name>{coffee.name}</Name>
+			<Description>{coffee.description}</Description>
 
 			<CardFooter>
 				<div>
 					<span>R$</span>
-					<h2>{price}</h2>
+					<h2>{formattedPrice}</h2>
 				</div>
 
 				<AddCartWrapper>

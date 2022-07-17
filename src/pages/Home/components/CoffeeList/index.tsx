@@ -16,11 +16,7 @@ export function CoffeeList() {
 				{coffees.map(coffee =>
 					<CoffeeCard
 						key={coffee.id}
-						name={coffee.name}
-						description={coffee.description}
-						image={coffee.photo}
-						price={coffee.price}
-						tags={coffee.tags}
+						coffee={coffee}
 					/>
 				)}
 			</Coffees>
