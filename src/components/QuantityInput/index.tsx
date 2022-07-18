@@ -5,9 +5,13 @@ import {
 	Container, IconWrapper
 } from "./styles";
 
-export function QuantityInput() {
+interface QuantityInputProps {
+	size?: "small" | "medium";
+}
+
+export function QuantityInput({ size = "medium" }: QuantityInputProps) {
 	return (
-		<Container>
+		<Container size={size}>
 			<IconWrapper>
 				<Minus size={14} weight="fill" />
 			</IconWrapper>
