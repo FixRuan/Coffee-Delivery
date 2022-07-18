@@ -7,18 +7,21 @@ import {
 
 interface QuantityInputProps {
 	size?: "small" | "medium";
+	quantity: number;
+	onIncrease: () => void;
+	onDecrease: () => void;
 }
 
-export function QuantityInput({ size = "medium" }: QuantityInputProps) {
+export function QuantityInput({ size = "medium", onDecrease, onIncrease, quantity }: QuantityInputProps) {
 	return (
 		<Container size={size}>
-			<IconWrapper>
+			<IconWrapper onClick={onDecrease}>
 				<Minus size={14} weight="fill" />
 			</IconWrapper>
 
-			<input type="number" readOnly value={1} />
+			<input type="number" readOnly value={quantity} />
 
-			<IconWrapper>
+			<IconWrapper onClick={onIncrease}>
 				<Plus size={14} weight="fill" />
 			</IconWrapper>
 		</Container>
