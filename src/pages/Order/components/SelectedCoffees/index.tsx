@@ -1,5 +1,6 @@
 import React from "react";
 import { CoffeeCartCard } from "../CoffeeCartCard";
+import { ConfirmationSection } from "./ConfirmationSection";
 
 import {
 	Container, DetailsContainer
@@ -12,6 +13,8 @@ export function SelectedCoffees() {
 			<DetailsContainer>
 				<CoffeeCartCard />
 				<CoffeeCartCard />
+
+				<ConfirmationSection />
 			</DetailsContainer>
 		</Container>
 	);
