@@ -8,8 +8,11 @@ import {
 
 import logo from "../../assets/logo.svg";
 import { NavLink } from "react-router-dom";
+import { useCart } from "../../hooks/useCart";
 
 export function Header() {
+
+	const { cartQuantity } = useCart();
 
 	return (
 		<Container>
@@ -26,6 +29,7 @@ export function Header() {
 
 					<NavLink to="/order" >
 						<HeaderButton variant="yellow">
+							{cartQuantity >= 1 && <span>{cartQuantity}</span>}
 							<ShoppingCart size={20} weight="fill" />
 						</HeaderButton>
 					</NavLink>

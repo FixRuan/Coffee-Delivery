@@ -35,16 +35,14 @@ export function CoffeeCard({ coffee }: Coffee) {
 	}
 
 	function handleDecrease() {
-		if (quantity != 1) {
-			setQuantity(oldState => oldState - 1);
-		}
+		setQuantity(oldState => oldState - 1);
 	}
 
 	function handleAddToCart() {
 
 		const cofeeToAdd = {
 			...coffee,
-			quantity: 1
+			quantity,
 		};
 
 		addCoffeeToCart(cofeeToAdd);
