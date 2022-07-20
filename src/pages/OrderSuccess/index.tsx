@@ -1,4 +1,5 @@
-import React from "react";
+/* eslint-disable indent */
+import React, { useEffect } from "react";
 import IllustrationImg from "../../assets/Illustration.png";
 import { MapPin, Clock, CurrencyDollar, } from "phosphor-react";
 
@@ -7,9 +8,27 @@ import {
 } from "./styles";
 import { InfoCard } from "../../components/Info";
 import { useTheme } from "styled-components";
+import { useLocation, useNavigate } from "react-router-dom";
+import { OrderData, PaymentMethod } from "../Order";
+import { paymentMethods } from "../Order/components/OrderForm/Payment";
+
+interface ParamsType {
+	state: OrderData;
+}
 
 export function OrderSuccessPage() {
 	const { colors } = useTheme();
+
+	const { state } = useLocation() as unknown as ParamsType;
+	const navigate = useNavigate();
+
+	useEffect(() => {
+		if (!state) {
+			navigate("/");
+		}
+	}, []);
+
+	if (!state) return <></>;
 
 
 	return (
@@ -27,9 +46,9 @@ export function OrderSuccessPage() {
 						text={
 							<RegularText>
 								Entrega em
-								<Strong>Rua João Daniel Martinelli, 102</Strong>
+								<Strong> {state.street}, {state.number}</Strong>
 								<br />
-								Farrapos - Porto Alegre, RS
+								{state.neighborhood} - {state.city}, {state.uf}
 							</RegularText>
 						}
 					/>
@@ -51,7 +70,7 @@ export function OrderSuccessPage() {
 						text={
 							<RegularText>
 								Pagamento na entrega <br />
-								<Strong>Cartão de Crédito</Strong>
+								<Strong>{paymentMethods[state.paymentMethod].label}</Strong>
 							</RegularText>
 						}
 					/>
