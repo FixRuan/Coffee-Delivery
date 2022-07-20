@@ -8,7 +8,7 @@
 
 ## Funcionalidades da aplicação
 - Adicionar cafés ao carrinho
-- Aumentar e Diminuir quantitade de cafés selecionados
+- Aumentar e Diminuir quantidade de cafés selecionados
 - Remover café do carrinho
 - Preencher formulário e método de pagamento
 
