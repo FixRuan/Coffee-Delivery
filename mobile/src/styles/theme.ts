@@ -19,7 +19,16 @@ export const defaultTheme = {
     "brand-yellow-light": "#F1E9C9",
   },
   fonts: {
-    regular: "'Roboto'",
-    title: "'Baloo 2'",
+    baloo: {
+      regular: "Baloo2_400Regular",
+      medium: "Baloo2_500Medium",
+      bold: "Baloo2_700Bold",
+      extraBold: "Baloo2_800ExtraBold"
+    },
+    roboto: {
+      regular: "Roboto_400Regular",
+      medium: "Roboto_500Medium",
+      bold: "Roboto_700Bold",
+    },
   },
 } as const;

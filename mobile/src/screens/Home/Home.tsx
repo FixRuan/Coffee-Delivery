@@ -3,14 +3,15 @@ import React from "react";
 import { Text } from "react-native";
 
 import {
-  Container
+  Container,
+  Title,
 } from "./styles";
 
 export function Home() {
   return (
     <Container>
       <StatusBar translucent={false} style="dark" backgroundColor="#fff" />
-      <Text>Hello World</Text>
+      <Title>Hello World</Title>
     </Container>
   );
 }
