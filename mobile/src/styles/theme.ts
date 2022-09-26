@@ -22,4 +22,4 @@ export const defaultTheme = {
     regular: "'Roboto'",
     title: "'Baloo 2'",
   },
-};
+} as const;
