@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import * as SplashScreen from "expo-splash-screen";
 import * as Font from "expo-font";

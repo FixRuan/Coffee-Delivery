@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { Text } from "react-native";
+import { useTheme } from "styled-components/native";
+import { Header } from "../../components/Header/Header";
 
 import {
   Container,
@@ -8,10 +9,12 @@ import {
 } from "./styles";
 
 export function Home() {
+  const { colors } = useTheme();
+
   return (
     <Container>
-      <StatusBar translucent={false} style="dark" backgroundColor="#fff" />
-      <Title>Hello World</Title>
+      <StatusBar translucent={false} style="light" backgroundColor={colors["brand-purple-dark"]} />
+      <Header />
     </Container>
   );
 }
