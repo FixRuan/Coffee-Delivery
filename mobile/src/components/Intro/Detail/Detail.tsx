@@ -20,7 +20,7 @@ export function Detail({ DetailData }: DetailProps) {
       <>
         {DetailData.icon}
       </>
-      <DetailTitle>Compra simples e segura</DetailTitle>
+      <DetailTitle>{DetailData.title}</DetailTitle>
     </Container>
   );
 }
