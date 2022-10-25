@@ -1,6 +1,9 @@
+import React, { useEffect } from "react";
+import { BackHandler } from "react-native";
+
 import { StatusBar } from "expo-status-bar";
-import React from "react";
 import { useTheme } from "styled-components/native";
+
 import { Header } from "../../components/Header/Header";
 import { Intro } from "../../components/Intro/Intro";
 
@@ -10,6 +13,11 @@ import {
 
 export function Home() {
   const { colors } = useTheme();
+
+  useEffect(() => {
+    const backHandler = BackHandler.addEventListener("hardwareBackPress", () => true);
+    return () => backHandler.remove();
+  }, []);
 
   return (
     <Container>
