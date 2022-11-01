@@ -5,6 +5,7 @@ import { Text } from "react-native";
 
 import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./src/styles/theme";
+import { BottomTab } from "./src/Router";
 
 export default function App() {
   const isLoadingComplete = useCachedResources();
@@ -15,7 +16,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <Home />
+      <BottomTab />
     </ThemeProvider>
   );
 }
