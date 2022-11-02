@@ -20,15 +20,15 @@ export const FindCoffeeTexts = styled.View`
 
 export const Title = styled.Text`
   font-family: ${({ theme }) => theme.fonts.baloo.extraBold};
-  font-size: ${RFValue(16)}px;
+  font-size: ${RFValue(20)}px;
   color: ${({ theme }) => theme.colors.title};
 `;
 
 export const About = styled.Text`
   font-family: ${({ theme }) => theme.fonts.roboto.regular};
   color: ${({ theme }) => theme.colors.subtitle};
-  font-size: ${RFValue(13)}px;
-  line-height: 20px;
+  font-size: ${RFValue(15)}px;
+  line-height: 24px;
 `;
 
 export const Details = styled(FlatList)`

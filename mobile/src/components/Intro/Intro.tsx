@@ -28,7 +28,6 @@ export function Intro() {
 
       <FlatList
         data={details}
-        numColumns={2}
         contentContainerStyle={{ marginTop: 24 }}
         renderItem={
           ({ item }) =>

@@ -7,6 +7,8 @@ import { ThemeProvider } from "styled-components";
 import { defaultTheme } from "./src/styles/theme";
 import { BottomTab } from "./src/Router";
 
+import { NavigationContainer } from "@react-navigation/native";
+
 export default function App() {
   const isLoadingComplete = useCachedResources();
 
@@ -16,7 +18,9 @@ export default function App() {
 
   return (
     <ThemeProvider theme={defaultTheme}>
-      <BottomTab />
+      <NavigationContainer>
+        <BottomTab />
+      </NavigationContainer>
     </ThemeProvider>
   );
 }
