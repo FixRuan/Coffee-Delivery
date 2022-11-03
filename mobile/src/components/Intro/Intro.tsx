@@ -1,4 +1,5 @@
 import React from "react";
+import { FlatList } from "react-native";
 
 import {
   Container,
@@ -11,7 +12,6 @@ import {
 import IntroSvg from "../../assets/Intro-img.svg";
 
 import { Detail } from "./Detail/Detail";
-import { FlatList } from "react-native";
 import { details } from "../../utils/DetailsData";
 
 export function Intro() {

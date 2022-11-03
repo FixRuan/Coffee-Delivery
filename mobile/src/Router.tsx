@@ -1,16 +1,49 @@
 import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Platform } from "react-native";
 
-const { Screen, Navigator } = createBottomTabNavigator();
+import { ShoppingCart, Coffee } from "phosphor-react-native";
 
 import { Home } from "./screens/Home/Home";
 import { Order } from "./screens/Order/Order";
 
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useTheme } from "styled-components/native";
+const { Screen, Navigator } = createBottomTabNavigator();
+
 export function BottomTab() {
+  const { colors } = useTheme();
+
   return (
-    <Navigator initialRouteName="Home" screenOptions={{ headerShown: false }}>
-      <Screen name="Home" component={Home} />
-      <Screen name="Order" component={Order} />
+    <Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        tabBarActiveTintColor: colors["brand-purple-dark"],
+        tabBarInactiveTintColor: colors.text,
+        headerShown: false,
+        tabBarShowLabel: true,
+        tabBarLabelPosition: "beside-icon",
+        tabBarStyle: {
+          height: 60,
+          paddingVertical: Platform.OS === "ios" ? 20 : 0,
+          borderTopColor: colors.background,
+          backgroundColor: colors.background,
+        }
+      }}>
+      <Screen
+        name="Home"
+        component={Home}
+        options={{
+          tabBarIcon: ({ color }) => (<Coffee color={color} />)
+        }}
+      />
+
+      <Screen
+        name="Order"
+        component={Order}
+        options={{
+          tabBarIcon: ({ color }) => (<ShoppingCart color={color} />)
+        }}
+      />
     </Navigator>
   );
 }
