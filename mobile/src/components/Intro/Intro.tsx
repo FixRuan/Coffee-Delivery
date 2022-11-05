@@ -26,17 +26,10 @@ export function Intro() {
         <IntroSvg />
       </FindCoffee>
 
-      <FlatList
-        data={details}
-        contentContainerStyle={{ marginTop: 24 }}
-        renderItem={
-          ({ item }) =>
-            <Detail
-              key={item.id}
-              DetailData={item}
-            />
-        }
-      />
+      {details.map(detail =>
+        <Detail key={detail.id} DetailData={detail} />
+      )}
+
     </Container>
   );
 }

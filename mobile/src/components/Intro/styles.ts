@@ -11,6 +11,7 @@ export const FindCoffee = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 12px;
 `;
 
 export const FindCoffeeTexts = styled.View`

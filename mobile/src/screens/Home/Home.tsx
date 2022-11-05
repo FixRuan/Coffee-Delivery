@@ -6,6 +6,7 @@ import { useTheme } from "styled-components/native";
 
 import { Header } from "../../components/Header/Header";
 import { Intro } from "../../components/Intro/Intro";
+import { Coffee } from "./Coffee";
 
 import {
   Container,
@@ -22,15 +23,21 @@ export function Home() {
   }, []);
 
   return (
-    <Container>
+    <>
+
       <StatusBar translucent={false} style="light" backgroundColor={colors["brand-purple-dark"]} />
-      <Header />
-      <Intro />
+      <Container>
+        <Header />
+        <Intro />
 
-      <CoffeesContainer>
-        <CoffeesTitle>Nossos cafés</CoffeesTitle>
-      </CoffeesContainer>
+        <CoffeesContainer>
+          <CoffeesTitle>Nossos cafés</CoffeesTitle>
 
-    </Container>
+          <Coffee />
+          <Coffee />
+        </CoffeesContainer>
+
+      </Container>
+    </>
   );
 }
