@@ -9,6 +9,8 @@ import { Intro } from "../../components/Intro/Intro";
 
 import {
   Container,
+  CoffeesContainer,
+  CoffeesTitle
 } from "./styles";
 
 export function Home() {
@@ -24,6 +26,11 @@ export function Home() {
       <StatusBar translucent={false} style="light" backgroundColor={colors["brand-purple-dark"]} />
       <Header />
       <Intro />
+
+      <CoffeesContainer>
+        <CoffeesTitle>Nossos cafés</CoffeesTitle>
+      </CoffeesContainer>
+
     </Container>
   );
 }

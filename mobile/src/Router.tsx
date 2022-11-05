@@ -1,14 +1,14 @@
 import React from "react";
 import { Platform } from "react-native";
+import { useTheme } from "styled-components/native";
 
 import { ShoppingCart, Coffee } from "phosphor-react-native";
 
 import { Home } from "./screens/Home/Home";
 import { Order } from "./screens/Order/Order";
 
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { useTheme } from "styled-components/native";
 const { Screen, Navigator } = createBottomTabNavigator();
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 export function BottomTab() {
   const { colors } = useTheme();
@@ -17,8 +17,8 @@ export function BottomTab() {
     <Navigator
       initialRouteName="Home"
       screenOptions={{
-        tabBarActiveTintColor: colors["brand-purple-dark"],
-        tabBarInactiveTintColor: colors.text,
+        tabBarActiveTintColor: colors["brand-yellow-dark"],
+        tabBarInactiveTintColor: colors.background,
         headerShown: false,
         tabBarShowLabel: true,
         tabBarLabelPosition: "beside-icon",
@@ -26,7 +26,7 @@ export function BottomTab() {
           height: 60,
           paddingVertical: Platform.OS === "ios" ? 20 : 0,
           borderTopColor: colors.background,
-          backgroundColor: colors.background,
+          backgroundColor: colors["brand-purple-dark"],
         }
       }}>
       <Screen

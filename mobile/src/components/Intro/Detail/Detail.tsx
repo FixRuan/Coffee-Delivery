@@ -1,8 +1,6 @@
 import React from "react";
 
-import {
-  Container, DetailTitle
-} from "./styles";
+import { Container, DetailTitle } from "./styles";
 
 interface Props {
   title: string;
@@ -17,9 +15,7 @@ interface DetailProps {
 export function Detail({ DetailData }: DetailProps) {
   return (
     <Container bgColor={DetailData.color}>
-      <>
-        {DetailData.icon}
-      </>
+      <>{DetailData.icon}</>
       <DetailTitle>{DetailData.title}</DetailTitle>
     </Container>
   );
