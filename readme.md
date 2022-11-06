@@ -14,12 +14,16 @@ Desafio de React do ignite (Rocketseat)
 - Preencher formulário e método de pagamento
 
 ## Tecnologias utilizadas
+# Web
 - React
 - Typescript
 - Styled components
 - React router
 - React hook form
 - Zod
+
+# Mobile
+- React Native
 
 ## Como executar a aplicação 
 
