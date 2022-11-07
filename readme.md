@@ -24,6 +24,7 @@ Desafio de React do ignite (Rocketseat)
 
 # Mobile
 - React Native
+- Expo
 
 ## Como executar a aplicação 
 
