@@ -25,6 +25,7 @@ Desafio de React do ignite (Rocketseat)
 # Mobile
 - React Native
 - Expo
+- Styled Components
 
 ## Como executar a aplicação 
 
