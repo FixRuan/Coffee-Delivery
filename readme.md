@@ -26,6 +26,7 @@ Desafio de React do ignite (Rocketseat)
 - React Native
 - Expo
 - Styled Components
+- React Navigation v6
 
 ## Como executar a aplicação 
 
