@@ -28,6 +28,7 @@ Desafio de React do ignite (Rocketseat)
 - Styled Components
 - React Navigation v6
 - Yup
+- Phosphor icons
 
 ## Como executar a aplicação 
 
