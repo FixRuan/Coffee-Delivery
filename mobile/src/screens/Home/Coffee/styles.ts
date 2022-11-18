@@ -10,6 +10,11 @@ export const Container = styled.View`
    border-bottom-right-radius: 6px;
    margin-bottom: 12px;
    flex-direction: row;
+   align-items: center;
+   padding: 4px 8px;
 `;
 
-export const CoffeeImage = styled.Image``;
+export const CoffeeImage = styled.Image`
+  width: 80px;
+  height: 80px;
+`;
