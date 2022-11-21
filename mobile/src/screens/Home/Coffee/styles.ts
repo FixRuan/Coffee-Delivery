@@ -1,4 +1,5 @@
 import styled from "styled-components/native";
+import { RFValue } from "react-native-responsive-fontsize";
 
 export const Container = styled.View`
    width: 100%;
@@ -17,4 +18,22 @@ export const Container = styled.View`
 export const CoffeeImage = styled.Image`
   width: 80px;
   height: 80px;
+`;
+
+export const CoffeeInfoWrapper = styled.View`
+  flex: 1;
+  margin-left: 12px;
+`;
+
+export const CoffeeName = styled.Text`
+  margin-bottom: 2px;
+  font-size: ${RFValue(18)}px;
+  font-family: ${({ theme }) => theme.fonts.baloo.bold};
+  color: ${({ theme }) => theme.colors.subtitle};
+`;
+
+export const CoffeeDescription = styled.Text`
+  font-size: ${RFValue(14)}px;
+  font-family: ${({ theme }) => theme.fonts.roboto.regular};
+  color: ${({ theme }) => theme.colors.label};
 `;
